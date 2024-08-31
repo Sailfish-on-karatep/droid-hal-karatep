@@ -11,7 +11,20 @@
 
 %define droid_target_aarch64 1
 
+#define apex_path "system/apex/com.android.runtime"
+
+%define straggler_files \
+/bugreports\
+/d\
+/dsp\
+/firmware\
+/product\
+/sdcard\
+/system_ext\
+%{nil}
+
 %include rpm/dhd/droid-hal-device.inc
+
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
 # sign, otherwise they will remain defined! E.g.:
